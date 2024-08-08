@@ -1,0 +1,60 @@
+/* General settings */
+:root{
+    --background-clr: #F3C178;
+    --button-bg: #2176FF;
+    --button-brd: #0057E2;
+}
+
+html{
+    box-sizing: border-box;
+    margin: 0;
+    background-color: var(--background-clr);
+    font-family: Irish Grover, sans-serif
+}
+
+.centerall{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Typography */
+h1{
+    font-size: 1.6rem;
+}
+
+/* Page style */
+header{
+    margin-top: 80px;
+}
+
+.logo__space{
+    margin-top: 34px;
+}
+
+.content{
+    margin-top: 100px;
+}
+
+button{
+    margin-top: 64px;
+    height: 2.8rem;
+    width: 11rem;
+    color: var(--background-clr);
+    background-color: var(--button-bg);
+    border: 2px solid var(--button-brd);
+    font-family: Irish Grover, sans-serif;
+    font-size: 1.2rem;
+    border-radius: 0.6rem;
+}
+
+button:hover{
+    background-color: var(--button-brd);
+}
+
+footer{
+    position: relative;
+    top: 10vh;
+}
+
+
