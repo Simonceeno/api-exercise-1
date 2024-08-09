@@ -24,9 +24,11 @@ const renderJoke = (data) => {
     secondLine.innerHTML = data[0].punchline;
 }
 
-// Sound playing function on click
+// Sound playing function on click after 2 seconds
 const playSound = () => {
-    audio.play()
+    setTimeout(() => {
+        audio.play()
+    }, 1500)
 }
 
 
