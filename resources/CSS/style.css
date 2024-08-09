@@ -3,29 +3,103 @@
   --background-clr: #f3c178;
   --button-bg: #2176ff;
   --button-brd: #0057e2;
+  --button-fcs: black;
 }
 
 html {
   box-sizing: border-box;
-  margin: 0;
   background-color: var(--background-clr);
-  font-family: Irish Grover, sans-serif;
+  font-family: "Irish Grover", sans-serif;
+}
+
+body{
+    margin:0;
 }
 
 .centerall {
   display: flex;
   align-items: center;
   flex-direction: column;
+  text-align: center;
+}
+
+div.content {
+  margin-top: 3rem;
 }
 
 /* Typography */
 h1 {
-  font-size: 1.6rem;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.2rem;
+}
+
+h3 {
+  font-family: "Open Sans semibold", sans-serif;
+  font-size: 0.9rem;
 }
 
 /* Page style */
 header {
-  margin-top: 80px;
+  margin-top: 60px;
+}
+
+.logo__img {
+  width: 80vw;
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    margin-top: 25px;
+  }
+
+  h1 {
+    font-size: 1rem;
+    margin: auto 2rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    margin: 1rem 1rem;
+  }
+
+  div.content {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+    margin: 0.6rem 2rem;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  header {
+    margin-top: 30px;
+  }
+
+  .logo__img {
+    width: 80vw;
+  }
+
+  h1 {
+    font-size: 1rem;
+    margin: auto 1rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    margin: 1rem 1rem;
+  }
+
+  div.content {
+    margin-top: 1.3rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+    margin: 0.6rem 1rem;
+  }
 }
 
 .logo__space {
@@ -42,7 +116,7 @@ button {
   width: 11rem;
   color: var(--background-clr);
   background-color: var(--button-bg);
-  border: 2px solid var(--button-brd);
+  border: 3px solid var(--button-brd);
   font-family: Irish Grover, sans-serif;
   font-size: 1.2rem;
   border-radius: 0.6rem;
@@ -52,7 +126,11 @@ button:hover {
   background-color: var(--button-brd);
 }
 
+button:focus{
+    border: 4px solid var(--button-fcs);
+}
+
 footer {
   position: relative;
-  top: 10vh;
+  top: 8.5rem;
 }

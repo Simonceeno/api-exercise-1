@@ -9,18 +9,19 @@ const secondLine = document.getElementById("punchline");
 const getData = async () => {
     try {
         const response = await fetch(jokeApi);
-        const data = await response.json();
-        console.log(data)
-        // renderJoke(data);
+        let data = await response.json();
+        // console.log(data); <- uncomment to see response on console
+        renderJoke(data);
     } catch (error) {
-        console.error('Errore durante il recupero dei dati:', error);
+        console.error('Error:', error);
     }
 }
 
 // Joke rendering function on the page
+// As the requested APIs are actually an array of objects:
 const renderJoke = (data) => {
-    setup.innerHTML = data.setup;
-    punchline.innerHTML = data.punchline;
+    firstLine.innerHTML = data[0].setup;
+    secondLine.innerHTML = data[0].punchline;
 }
 
 // Sound playing function on click
